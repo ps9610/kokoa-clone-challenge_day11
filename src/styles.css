@@ -1,0 +1,230 @@
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
+
+body {
+  background-color: #f8f8fa;
+  border: 1px solid black;
+  border-radius: 25px;
+  width: 380px;
+  height: 825px;
+  margin: 25px 15px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.wall-paper {
+  width: 380px;
+  height: 380px;
+  background-size: 380px 380px;
+  position: relative;
+  z-index: 1;
+}
+
+.wall-paper::before {
+  width: 380px;
+  height: 380px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  position: absolute;
+  content: "";
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 1)
+    ),
+    url(image/image_bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.status_bar {
+  margin: 0px;
+  padding: 15px 32px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header_status_bar {
+  margin: 30px 32px 30px 32px;
+  display: flex;
+  justify-content: space-between;
+}
+.header_status_bar .status_bar_arrow,
+.status_bar_share {
+  cursor: pointer;
+}
+
+.paris_story {
+  margin: 200px 32px 0px 32px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.paris_story .story_image {
+  border-radius: 10px;
+}
+
+.paris_story .story_1 {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.paris_story .story_2 {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.paris_story .story_3 {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.paris_story .story_4 {
+  background-color: #3f67ff;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+.paris_story .story_4 .story_4_number {
+  position: relative;
+  top: 35%;
+  left: 30%;
+}
+
+.paris_tag {
+  color: #3f67ff;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 25px 0px 0px 0px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.paris_tag .tag_1 {
+  margin-left: 30px;
+  padding: 10px 15px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #dee4fa;
+  cursor: pointer;
+}
+
+.paris_tag .tag_2 {
+  padding: 10px 15px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-left: 10px;
+  background-color: #dee4fa;
+  cursor: pointer;
+}
+
+.paris_tag .tag_3 {
+  padding: 10px 15px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-left: 10px;
+  background-color: #dee4fa;
+  cursor: pointer;
+}
+
+.paris_title {
+  margin: 10px 32px 15px 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.paris_title .big_title {
+  font-size: 33px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.paris_title .heart-box {
+  color: red;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.paris_address {
+  color: #3f67ff;
+  padding: 80px 32px 15px 32px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.paris_address .address_content {
+  color: black;
+  padding-left: 10px;
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.paris_additional {
+  margin: 1px 32px 15px 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.paris_additional .add_left {
+  color: #ffbc00;
+  cursor: pointer;
+}
+
+.paris_additional .star_score {
+  padding-left: 10px;
+  color: black;
+  font-weight: 600;
+}
+
+.paris_additional .add_right {
+  opacity: 50%;
+}
+
+.detail {
+  margin: 28px 32px 0px 32px;
+}
+
+.detail .detail_title {
+  font-size: 14px;
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.detail .detail_content {
+  opacity: 80%;
+  margin: 6px 0px 18px 0px;
+  line-height: 180%;
+}
+
+.detail .detail_tag {
+  color: #3f67ff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav .nav__list {
+  margin: 28px 32px 0px 32px;
+  padding-top: 50px;
+  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+}
+
+.nav .nav__list-item_middle {
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  position: relative;
+  bottom: 52px;
+  background-color: #3f67ff;
+}
