@@ -146,12 +146,12 @@ body {
   cursor: pointer;
 }
 
-.paris_title .heart-box {
-  color: red;
-  width: 30px;
-  height: 30px;
+.heart-box i {
   background-color: white;
+  padding: 10px;
+  border-radius: 50%;
   cursor: pointer;
+  color: red;
 }
 
 .paris_address {
@@ -211,20 +211,104 @@ body {
   cursor: pointer;
 }
 
-.nav .nav__list {
-  margin: 28px 32px 0px 32px;
-  padding-top: 50px;
-  display: inline-block;
+.nav {
+  position: relative;
+  width: 80%;
+  right: 0;
+  bottom: 0;
   display: flex;
   justify-content: space-between;
+}
+
+.nav::before {
+  position: absolute;
+  width: 50%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: -13px;
+  background-color: #9a9da2;
+  content: "";
+  height: 3px;
+  z-index: 2;
+}
+
+.nav .nav_icons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
   font-size: 22px;
 }
 
-.nav .nav__list-item_middle {
+.nav .nav-icon:nth-child(1) a,
+.nav .nav-icon:nth-child(4) a,
+.nav .nav-icon:nth-child(5) a {
+  color: #999;
+}
+
+.nav .nav-icon:nth-child(2) a {
+  position: relative;
+  color: #3f67ff;
+}
+
+.nav .nav-icon:nth-child(2) a::after {
+  color: #3f67ff;
+  position: absolute;
+  width: 13%;
+  left: 60px;
+  right: 0;
+  bottom: 80px;
+  content: "";
+  height: 1px;
+}
+
+.nav .nav-icon:nth-child(1) a:hover,
+.nav .nav-icon:nth-child(4) a:hover,
+.nav .nav-icon:nth-child(5) a:hover {
+  color: #3f67ff;
+  position: absolute;
+  width: 13%;
+  left: 0;
+  right: 0;
+  bottom: 80px;
+  content: "";
+  height: 1px;
+}
+
+.nav .nav-icon:nth-child(1) a:hover::after,
+.nav .nav-icon:nth-child(4) a:hover::after,
+.nav .nav-icon:nth-child(5) a:hover::after {
+  background-color: #3f67ff;
+  position: absolute;
+  width: 13%;
+  left: 0;
+  right: 0;
+  bottom: 80px;
+  content: "";
+  height: 1px;
+}
+
+.nav .nav-icon:nth-child(4) a:hover::after {
+  left: 210px;
+}
+.nav .nav-icon:nth-child(5) a:hover::after {
+  left: 270px;
+}
+
+.nav .nav-icon:nth-child(3) {
   color: white;
   padding: 12px;
   border-radius: 50%;
   position: relative;
   bottom: 52px;
   background-color: #3f67ff;
+  border: 2px solid grey;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 10px 5px grey;
+}
+
+.nav .nav-icon:nth-child(3)::before {
+  position: absolute;
+  z-index: 5;
+  border: 2px solid grey;
 }
