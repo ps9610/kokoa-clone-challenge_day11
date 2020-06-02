@@ -2,8 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
 
 body {
-  background-color: #f8f8fa;
-  border: 1px solid black;
+  background-color: #ffffff;
   border-radius: 25px;
   width: 380px;
   height: 825px;
@@ -14,7 +13,6 @@ body {
 .wall-paper {
   width: 380px;
   height: 380px;
-  background-size: 380px 380px;
   position: relative;
   z-index: 1;
 }
@@ -213,11 +211,10 @@ body {
 
 .nav {
   position: relative;
-  width: 80%;
+  width: 90%;
   right: 0;
   bottom: 0;
-  display: flex;
-  justify-content: space-between;
+  margin: 0px 20px;
 }
 
 .nav::before {
@@ -226,89 +223,92 @@ body {
   margin: 0 auto;
   left: 0;
   right: 0;
-  bottom: -13px;
+  bottom: 10px;
   background-color: #9a9da2;
   content: "";
   height: 3px;
   z-index: 2;
 }
 
-.nav .nav_icons {
+.nav .nav__icons {
+  position: relative;
+  margin-top: 105px;
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  font-size: 22px;
+  justify-content: space-around;
 }
 
-.nav .nav-icon:nth-child(1) a,
-.nav .nav-icon:nth-child(4) a,
-.nav .nav-icon:nth-child(5) a {
+.nav .nav__icon a {
+  font-size: 22px;
+  margin-bottom: 15px;
   color: #999;
 }
 
-.nav .nav-icon:nth-child(2) a {
-  position: relative;
+.nav .nav__icon:hover a {
   color: #3f67ff;
 }
 
-.nav .nav-icon:nth-child(2) a::after {
-  color: #3f67ff;
+.nav .nav__icon:hover::after {
   position: absolute;
-  width: 13%;
-  left: 60px;
-  right: 0;
-  bottom: 80px;
   content: "";
-  height: 1px;
-}
-
-.nav .nav-icon:nth-child(1) a:hover,
-.nav .nav-icon:nth-child(4) a:hover,
-.nav .nav-icon:nth-child(5) a:hover {
-  color: #3f67ff;
-  position: absolute;
   width: 13%;
-  left: 0;
-  right: 0;
-  bottom: 80px;
-  content: "";
-  height: 1px;
-}
-
-.nav .nav-icon:nth-child(1) a:hover::after,
-.nav .nav-icon:nth-child(4) a:hover::after,
-.nav .nav-icon:nth-child(5) a:hover::after {
+  height: 3px;
+  top: -20px;
   background-color: #3f67ff;
+  z-index: 2;
+  transform: translateX(-34px);
+}
+
+.nav .nav__icon:nth-child(2) a {
+  color: #3f67ff;
+}
+
+.nav .nav__icon:nth-child(2):after {
   position: absolute;
-  width: 13%;
-  left: 0;
-  right: 0;
-  bottom: 80px;
   content: "";
-  height: 1px;
+  width: 13%;
+  height: 3px;
+  top: -20px;
+  background-color: #3f67ff;
+  z-index: 2;
+  transform: translateX(-34px);
 }
 
-.nav .nav-icon:nth-child(4) a:hover::after {
-  left: 210px;
-}
-.nav .nav-icon:nth-child(5) a:hover::after {
-  left: 270px;
-}
-
-.nav .nav-icon:nth-child(3) {
-  color: white;
-  padding: 12px;
+.nav .nav__icon:nth-child(3) {
+  background-color: #3f67ff;
+  padding: 17px 20px 19px 20px;
   border-radius: 50%;
   position: relative;
-  bottom: 52px;
-  background-color: #3f67ff;
-  border: 2px solid grey;
-  box-sizing: border-box;
-  box-shadow: 0px 5px 10px 5px grey;
+  bottom: 70px;
+  color: white;
+  border: 10px solid #bbb;
 }
 
-.nav .nav-icon:nth-child(3)::before {
+.nav .nav__icon:nth-child(3):hover::after {
   position: absolute;
-  z-index: 5;
-  border: 2px solid grey;
+  content: "";
+  width: 13%;
+  height: 3px;
+  top: 20px;
+  background-color: none;
+  z-index: 2;
+  transform: translateX(-34px);
 }
+
+.nav .nav__icon:nth-child(3) a {
+  color: white;
+}
+
+/* *box-shadow*
+
+형태: box-shadow(x-offset, y-offset, blur, color)의 순서
+
+-> x-offset
+  : 수치만큼 오른쪽으로 움직임(-(마이너스)값은 왼쪽)
+-> y-offset
+  : 수치만큼 아래로 움직임(-(마이너스)값은 위쪽) 
+-> blur
+  : 그림자 흐려짐. 숫자 큼: 흐려짐
+-> color
+  : 그림자 색깔. #FEFEFE / rgba(0, 0, 0, 1) 둘 다 사용 가능  
+-> rgba
+  : a = 불투명도 /  숫자 1= 원색 / 0.5(.5)= 50% */
